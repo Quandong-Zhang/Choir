@@ -2,7 +2,7 @@
 <html lang="zh-CN">
     <head>
         <meta charset="utf-8">
-        <title>DPlayer</title>
+        <title>Player</title>
         <link rel="icon" href="/logo.png">
         <script src="https://cdn.jsdelivr.net/npm/flv.js/dist/flv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script>
@@ -14,7 +14,21 @@
     <script src="https://cdn.jsdelivr.net/npm/dplayer@1.26.0/dist/DPlayer.min.js"></script>
     </head>
     <body>
+        <div id="dplayer"></div>
+        <script>
+            const dp = new DPlayer({
+                container: document.getElementById('dplayer'),
+                screenshot: true,
+                video: {
+                    url: 'https://choir-1304991672.cos.ap-nanjing.myqcloud.com/index.mp4',
+                    pic: 'https://choir-1304991672.cos.ap-nanjing.myqcloud.com/32571785.jpeg',
+                    thumbnails: 'https://choir-1304991672.cos.ap-nanjing.myqcloud.com/32571785.jpeg',
+                },
+            });
+        </script>
+        <!-- 播放器脚本文件 
         <video width="960" height="720" id="video" controls="controls" autoplay="autoplay" preload="auto" poster="https://choir-1304991672.cos.ap-nanjing.myqcloud.com/32571785.jpeg">
             <source src="https://choir-1304991672.cos.ap-nanjing.myqcloud.com/index.mp4" type="video/mp4">
-    </body>
+        -->
+        </body>
 </html>
